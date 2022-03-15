@@ -43,7 +43,7 @@ body {
     box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5);
 }
 .card:hover {
-    transform: perspective(2000px) rotate(-10deg);
+    transform: perspective(2000px);
     box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5);
 }
 .card .imgBox {
@@ -83,6 +83,29 @@ body {
 }
 .card .details h2 {
     text-transform: uppercase;
+}
+@media screen and (max-width: 650px) {
+    .card:hover {
+        transform: perspective(2500px);
+        box-shadow: none;
+    }
+    .card:hover .details {
+        box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5);
+    }
+    .card .details {
+        transition: 1s;
+    }
+    .card .imgBox {
+        transform-origin: top;
+    }
+    .card:hover .imgBox {
+        transform: rotateX(110deg);
+    }
+    .card:hover .imgBox img {
+        transform: scaleY(-1);
+        transition: transform 0.3s ease-in-out;
+        transition-delay: 0.3s;
+    }
 }
 .glow-on-hover {
     width: 220px;
