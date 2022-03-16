@@ -85,6 +85,10 @@ body {
     text-transform: uppercase;
 }
 @media screen and (max-width: 650px) {
+    .card {
+        width: 300px;
+        height: 400px;
+    }
     .card:hover {
         transform: perspective(2500px);
         box-shadow: none;
